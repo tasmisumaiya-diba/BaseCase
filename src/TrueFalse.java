@@ -1,6 +1,9 @@
 public class TrueFalse extends Ques {
     public TrueFalse(String question,Option correctAns,int points) {
         super(question,correctAns,points);
+        if(correctAns != Option.a && correctAns != Option.b){
+            throw new IllegalArgumentException("invalid option");
+        }
     }
     void displayQues() {
         System.out.println(question);
